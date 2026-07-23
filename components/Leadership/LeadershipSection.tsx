@@ -12,53 +12,40 @@ export function LeadershipSection() {
   return (
     <section
       id="leadership"
-      className="scroll-mt-24"
+      className="scroll-mt-24 bg-white section-padding"
       aria-labelledby="leadership-heading"
     >
-      {/* Intro — deep charcoal */}
-      <div className="bg-[#0C0C0C] px-margin-mobile pb-12 pt-16 md:px-margin-desktop md:pb-16 md:pt-24 lg:pt-28">
-        <div className="container-luxury !px-0">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-3xl text-center"
+      <div className="container-luxury">
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto mb-14 max-w-3xl text-center md:mb-20"
+        >
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#D4AF37]">
+            Our People
+          </p>
+          <h2
+            id="leadership-heading"
+            className="font-display text-display-sm tracking-wide text-charcoal md:text-display-md"
           >
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#D4AF37]">
-              Our People
-            </p>
-            <h2
-              id="leadership-heading"
-              className="font-display text-display-sm tracking-wide text-white md:text-display-md"
-            >
-              {LEADERSHIP_INTRO.title}
-            </h2>
-            <div
-              className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
-              aria-hidden
-            />
-            <p className="mt-5 text-body-md leading-relaxed text-white/65 md:text-body-lg">
-              {LEADERSHIP_INTRO.subtitle}
-            </p>
-            <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/50 md:text-body-md">
-              {LEADERSHIP_INTRO.philosophy}
-            </p>
-          </motion.div>
-        </div>
-      </div>
+            {LEADERSHIP_INTRO.title}
+          </h2>
+          <div
+            className="mx-auto mt-5 h-px w-16 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"
+            aria-hidden
+          />
+          <p className="mt-5 text-body-md leading-relaxed text-muted md:text-body-lg">
+            {LEADERSHIP_INTRO.subtitle}
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-muted/90 md:text-body-md">
+            {LEADERSHIP_INTRO.philosophy}
+          </p>
+        </motion.div>
 
-      {/* Founders — deep maroon / heritage */}
-      <div className="relative overflow-hidden bg-[#2A0A0E] px-margin-mobile py-16 md:px-margin-desktop md:py-20 lg:py-24">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-40"
-          aria-hidden
-          style={{
-            background:
-              "radial-gradient(ellipse at 20% 0%, rgba(212,175,55,0.12), transparent 45%), radial-gradient(ellipse at 80% 100%, rgba(139,30,45,0.35), transparent 50%)",
-          }}
-        />
-        <div className="container-luxury relative !px-0">
+        {/* Founders — gold highlight */}
+        <div className="mb-16 md:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -66,10 +53,13 @@ export function LeadershipSection() {
             transition={{ duration: 0.65 }}
             className="mb-8 text-center md:mb-12"
           >
-            <h3 className="font-display text-2xl tracking-wide text-white md:text-3xl">
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D4AF37]">
+              Gold Legacy
+            </p>
+            <h3 className="font-display text-2xl tracking-wide text-charcoal md:text-3xl">
               Founders
             </h3>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/55">
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted">
               Established in 1985, our founders laid the foundation of BBS GOLD
               through hard work, trust, and dedication.
             </p>
@@ -86,19 +76,9 @@ export function LeadershipSection() {
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Managing Directors — deep ink / navy */}
-      <div className="relative overflow-hidden bg-[#0B1520] px-margin-mobile py-16 md:px-margin-desktop md:py-20 lg:py-24">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-50"
-          aria-hidden
-          style={{
-            background:
-              "radial-gradient(ellipse at 75% 0%, rgba(212,175,55,0.1), transparent 42%), radial-gradient(ellipse at 15% 100%, rgba(30,58,95,0.45), transparent 50%)",
-          }}
-        />
-        <div className="container-luxury relative !px-0">
+        {/* Managing Directors — soft pink highlight */}
+        <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,10 +86,13 @@ export function LeadershipSection() {
             transition={{ duration: 0.65 }}
             className="mb-8 text-center md:mb-12"
           >
-            <h3 className="font-display text-2xl tracking-wide text-white md:text-3xl">
+            <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C45A6E]">
+              Next Generation
+            </p>
+            <h3 className="font-display text-2xl tracking-wide text-charcoal md:text-3xl">
               Managing Directors
             </h3>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/55">
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted">
               Leading the company&apos;s growth, innovation, manufacturing
               excellence, and expansion while preserving our legacy.
             </p>
