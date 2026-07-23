@@ -66,37 +66,37 @@ export const BUSINESS_HOURS = [
   { days: "Sunday", hours: "By Appointment" },
 ] as const;
 
-/** Homepage hero banners (BBS Jewellers creatives) */
+/** Homepage hero banners (BBS Jewellers creatives) — full artwork, no crop */
 export const HERO_BANNERS = [
   {
-    id: "necklace",
-    src: "/images/banners/banner-1.png",
-    alt: "BBS Jewellers — gold necklace collection, Bagade Bandhu Saraf since 1985",
-    title: "Pure Gold Heritage",
+    id: "rings-dark",
+    src: "/images/banners/banner-1.webp",
+    alt: "BBS Jewellers — pure gold rings, Bagade Bandhu Saraf since 1985",
+    title: "Pure Gold",
   },
   {
-    id: "rings",
-    src: "/images/banners/banner-2.png",
-    alt: "BBS Jewellers — premium gold rings, expertly crafted since 1985",
-    title: "Expertly Crafted",
+    id: "chain-cream",
+    src: "/images/banners/banner-2.webp",
+    alt: "BBS Jewellers — elegant gold chain on cream, Bagade Bandhu Saraf since 1985",
+    title: "Quiet Luxury",
   },
   {
-    id: "diya",
-    src: "/images/banners/banner-3.png",
-    alt: "BBS Jewellers — timeless values, treasured forever",
-    title: "Timeless Values",
-  },
-  {
-    id: "bangle",
-    src: "/images/banners/banner-4.png",
+    id: "bangle-emerald",
+    src: "/images/banners/banner-3.webp",
     alt: "BBS Jewellers — where tradition meets timeless beauty",
     title: "Tradition & Beauty",
   },
   {
-    id: "chain-cream",
-    src: "/images/banners/banner-5.png",
-    alt: "BBS Jewellers — cream luxury gold chain banner, Bagade Bandhu Saraf since 1985",
-    title: "Quiet Luxury",
+    id: "chain-dark",
+    src: "/images/banners/banner-4.webp",
+    alt: "BBS Jewellers — expertly crafted gold chain, Bagade Bandhu Saraf since 1985",
+    title: "Expertly Crafted",
+  },
+  {
+    id: "diya-cream",
+    src: "/images/banners/banner-5.webp",
+    alt: "BBS Jewellers — timeless values, treasured forever",
+    title: "Timeless Values",
   },
 ] as const;
 
@@ -197,10 +197,10 @@ Trust our purity. Believe in our craftsmanship. Choose BBS GOLD.`,
 
 /** Brand & team imagery */
 export const PLACEHOLDER_IMAGES = {
-  hero: "/images/banners/banner-5.png",
-  about: "/images/products/product-14.png",
-  craftsmanship: "/images/products/product-16.png",
-  manufacturing: "/images/products/product-05.png",
+  hero: "/images/banners/banner-5.webp",
+  about: "/images/products/product-14.webp",
+  craftsmanship: "/images/products/product-16.webp",
+  manufacturing: "/images/products/product-05.webp",
   director: "/images/team/santosh-bagade.webp",
 } as const;
 

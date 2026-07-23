@@ -13,6 +13,7 @@ type SoftImageProps = {
   className?: string;
   sizes?: string;
   priority?: boolean;
+  quality?: number;
   fallbackSrc?: string;
 };
 
@@ -25,6 +26,7 @@ export function SoftImage({
   className,
   sizes,
   priority,
+  quality = 70,
   fallbackSrc = "/images/placeholders/jewellery.svg",
 }: SoftImageProps) {
   const [current, setCurrent] = useState(src);
@@ -39,6 +41,7 @@ export function SoftImage({
       height={fill ? undefined : height}
       sizes={sizes}
       priority={priority}
+      quality={quality}
       unoptimized={isSvg}
       className={cn(className)}
       onError={() => {

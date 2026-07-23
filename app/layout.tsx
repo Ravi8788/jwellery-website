@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-background text-charcoal antialiased">
         <JsonLd />
         <Navbar />
-        <main className="min-h-screen pt-16 md:pt-[72px]">{children}</main>
+        <main className="min-h-screen pt-12 sm:pt-12 md:pt-14 lg:pt-14 xl:pt-14">{children}</main>
         <Footer />
         <FloatingWhatsApp />
       </body>

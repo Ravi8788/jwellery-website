@@ -15,6 +15,8 @@ export function Hero() {
   const [paused, setPaused] = useState(false);
   const total = HERO_BANNERS.length;
   const current = HERO_BANNERS[index];
+  const nextIndex = (index + 1) % total;
+  const prevIndex = (index - 1 + total) % total;
 
   const goTo = useCallback(
     (next: number) => {
@@ -36,67 +38,93 @@ export function Hero() {
 
   return (
     <section
-      className="relative z-0 bg-white"
+      className="relative z-0 overflow-x-hidden bg-[#F7F5F2]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
       aria-label="BBS GOLD featured banners"
     >
-      {/* Fixed responsive heights — keep banner artwork top (logo) fully visible below navbar */}
-      <div className="relative w-full overflow-hidden bg-[#F3EEE6]">
-        <div
-          className={cn(
-            "relative w-full overflow-hidden",
-            "h-[200px]",
-            "sm:h-[260px]",
-            "md:h-[320px]",
-            "lg:h-[380px]",
-            "xl:h-[420px]",
-            "2xl:h-[460px]"
-          )}
-        >
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={current.id}
-              className="absolute inset-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <Image
-                src={current.src}
-                alt={current.alt}
-                fill
-                priority={index === 0}
-                sizes="100vw"
-                className="object-cover object-top"
-              />
-            </motion.div>
-          </AnimatePresence>
+      {/* Prefetch neighbouring slides for instant swaps */}
+      <div className="pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0" aria-hidden>
+        {HERO_BANNERS.map((banner, i) => (
+          <Image
+            key={`preload-${banner.id}`}
+            src={banner.src}
+            alt=""
+            width={1000}
+            height={666}
+            priority={i < 2}
+            quality={70}
+            sizes="1px"
+          />
+        ))}
+      </div>
+
+      <div className="relative px-3 pb-2 pt-3 xs:px-4 xs:pt-3 sm:px-6 sm:pb-3 sm:pt-4 md:px-8 md:pt-5 lg:px-10 xl:px-12">
+        <div className="relative mx-auto w-full max-w-xl xs:max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl">
+          <div className="relative aspect-[1024/682] w-full overflow-hidden rounded-xl bg-[#EDE9E3] shadow-[0_8px_28px_rgba(0,0,0,0.12)] xs:rounded-2xl sm:rounded-3xl">
+            <AnimatePresence mode="sync" initial={false}>
+              <motion.div
+                key={current.id}
+                className="absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+              >
+                <Image
+                  src={current.src}
+                  alt={current.alt}
+                  fill
+                  priority
+                  quality={70}
+                  sizes="(max-width: 475px) 92vw, (max-width: 640px) 42rem, (max-width: 768px) 48rem, (max-width: 1024px) 56rem, (max-width: 1280px) 64rem, 72rem"
+                  className="object-contain object-center"
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            <Image
+              src={HERO_BANNERS[nextIndex].src}
+              alt=""
+              fill
+              quality={70}
+              sizes="(max-width: 475px) 92vw, (max-width: 1280px) 80vw, 72rem"
+              className="pointer-events-none absolute inset-0 -z-10 object-contain opacity-0"
+              aria-hidden
+            />
+            <Image
+              src={HERO_BANNERS[prevIndex].src}
+              alt=""
+              fill
+              quality={70}
+              sizes="(max-width: 475px) 92vw, (max-width: 1280px) 80vw, 72rem"
+              className="pointer-events-none absolute inset-0 -z-10 object-contain opacity-0"
+              aria-hidden
+            />
+          </div>
 
           <button
             type="button"
             onClick={prev}
             aria-label="Previous banner"
-            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 border border-black/10 bg-white/95 p-1.5 text-charcoal shadow-soft transition hover:border-gold sm:left-3 sm:p-2 md:left-5"
+            className="absolute left-2 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-[0_4px_14px_rgba(0,0,0,0.14)] transition hover:scale-105 hover:text-maroon xs:h-8 xs:w-8 sm:left-0 sm:h-10 sm:w-10 sm:-translate-x-1/2 md:h-11 md:w-11"
           >
-            <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+            <ChevronLeft className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
           </button>
           <button
             type="button"
             onClick={next}
             aria-label="Next banner"
-            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 border border-black/10 bg-white/95 p-1.5 text-charcoal shadow-soft transition hover:border-gold sm:right-3 sm:p-2 md:right-5"
+            className="absolute right-2 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-[0_4px_14px_rgba(0,0,0,0.14)] transition hover:scale-105 hover:text-maroon xs:h-8 xs:w-8 sm:right-0 sm:h-10 sm:w-10 sm:translate-x-1/2 md:h-11 md:w-11"
           >
-            <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+            <ChevronRight className="h-3.5 w-3.5 xs:h-4 xs:w-4 sm:h-5 sm:w-5" strokeWidth={1.75} />
           </button>
         </div>
       </div>
 
-      {/* Dots + CTAs under banner — clean separation */}
       <div className="border-b border-border bg-white">
-        <div className="container-luxury flex flex-col items-center justify-between gap-4 py-3.5 sm:flex-row sm:py-4">
+        <div className="container-luxury flex flex-col items-center justify-between gap-3 py-3 xs:gap-3.5 xs:py-3.5 sm:flex-row sm:gap-4 sm:py-4 md:py-5">
           <div
             className="flex items-center gap-1.5"
             role="tablist"
@@ -113,7 +141,7 @@ export function Hero() {
                 className={cn(
                   "h-1 overflow-hidden rounded-full transition-all duration-300",
                   i === index
-                    ? "w-7 bg-gold sm:w-8"
+                    ? "w-6 bg-gold xs:w-7 sm:w-8"
                     : "w-2 bg-border hover:bg-gold/60"
                 )}
               >
@@ -130,16 +158,16 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
+          <div className="flex flex-wrap justify-center gap-2 xs:gap-2.5 sm:gap-3">
             <Link
               href="/collections"
-              className="inline-flex min-h-10 items-center justify-center bg-maroon px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-maroon-dark sm:min-h-11 sm:px-6 sm:text-[11px]"
+              className="inline-flex min-h-9 items-center justify-center bg-maroon px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-maroon-dark xs:min-h-10 xs:px-5 xs:py-2.5 sm:min-h-11 sm:px-6 sm:text-[11px] md:min-h-12"
             >
               Explore Collections
             </Link>
             <Link
               href="/contact"
-              className="inline-flex min-h-10 items-center justify-center border border-charcoal px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-charcoal transition-all duration-300 hover:border-maroon hover:text-maroon sm:min-h-11 sm:px-6 sm:text-[11px]"
+              className="inline-flex min-h-9 items-center justify-center border border-charcoal px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-charcoal transition-all duration-300 hover:border-maroon hover:text-maroon xs:min-h-10 xs:px-5 xs:py-2.5 sm:min-h-11 sm:px-6 sm:text-[11px] md:min-h-12"
             >
               Contact Us
             </Link>

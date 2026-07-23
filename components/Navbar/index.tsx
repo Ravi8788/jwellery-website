@@ -23,7 +23,7 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 z-50 h-16 w-full border-b transition-all duration-300 md:h-[72px]",
+          "fixed top-0 z-50 h-12 w-full border-b transition-all duration-300 xs:h-12 sm:h-12 md:h-14 lg:h-14 xl:h-14",
           scrolled
             ? "border-border bg-white/95 shadow-soft backdrop-blur-md"
             : "border-border/70 bg-background-soft/95 backdrop-blur-sm"
@@ -35,13 +35,13 @@ export function Navbar() {
         >
           <Link
             href="/"
-            className="group flex shrink-0 flex-col"
+            className="group flex shrink-0 flex-col leading-tight"
             aria-label={`${SITE.name} home`}
           >
-            <span className="font-display text-lg font-semibold tracking-[0.2em] text-charcoal transition-colors group-hover:text-maroon md:text-xl">
+            <span className="font-display text-base font-semibold tracking-[0.18em] text-charcoal transition-colors group-hover:text-maroon xs:text-base sm:text-lg md:text-lg lg:text-xl">
               {SITE.name}
             </span>
-            <span className="hidden text-[9px] uppercase tracking-[0.22em] text-muted sm:block">
+            <span className="hidden text-[8px] uppercase tracking-[0.2em] text-muted xs:block sm:text-[8px] md:text-[9px]">
               Since {SITE.established}
             </span>
           </Link>
@@ -55,7 +55,7 @@ export function Navbar() {
                   href={item.href}
                   aria-current={active ? "page" : undefined}
                   className={cn(
-                    "px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition-all duration-300",
+                    "px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] transition-all duration-300",
                     active
                       ? "border border-gold text-maroon"
                       : "border border-transparent text-charcoal/80 hover:border-gold/50 hover:text-maroon"
@@ -70,18 +70,18 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact#form"
-              className="hidden items-center justify-center border border-maroon bg-maroon px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-maroon-dark md:inline-flex"
+              className="hidden items-center justify-center border border-maroon bg-maroon px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:bg-maroon-dark md:inline-flex"
             >
               Enquire Now
             </Link>
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="rounded-sm p-2 text-charcoal transition-colors hover:text-gold lg:hidden"
+              className="rounded-sm p-1.5 text-charcoal transition-colors hover:text-gold lg:hidden"
               aria-label="Open menu"
               aria-expanded={mobileOpen}
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5" />
             </button>
           </div>
         </nav>
