@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#FAFAFA"/>
+  <rect x="40" y="40" width="720" height="920" stroke="#D4AF37" stroke-opacity="0.35" stroke-width="1"/>
+  <circle cx="400" cy="420" r="120" stroke="#D4AF37" stroke-width="1.5" fill="#F5F0E6"/>
+  <circle cx="400" cy="420" r="70" stroke="#D4AF37" stroke-width="1" fill="#FFFFFF"/>
+  <text x="400" y="680" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1A1A1A" letter-spacing="6">BBS GOLD</text>
+  <text x="400" y="720" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#D4AF37" letter-spacing="4">SINCE 1985</text>
+</svg>
