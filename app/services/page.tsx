@@ -16,7 +16,7 @@ import { Button } from "@/components/Buttons";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: `Gold jewellery manufacturing, wholesale supply, custom designs, bulk orders, and retail partner support from ${SITE.name}.`,
+  description: `Gold jewellery manufacturing, wholesale supply, custom designs, bulk orders, and retail support from ${SITE.name}.`,
 };
 
 const ICONS: Record<string, LucideIcon> = {
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="What We Offer"
         title="Our Services"
-        description="End-to-end manufacturing and wholesale support for jewellery retailers, dealers, and business partners."
+        description="End-to-end manufacturing and wholesale support for jewellery retailers, dealers, and business clients."
       />
 
       <section className="bg-background section-padding !pt-12">
@@ -68,7 +68,7 @@ export default function ServicesPage() {
           <FadeIn>
             <div className="border border-gold/30 bg-white px-6 py-12 shadow-card md:px-12">
               <h2 className="font-display text-2xl text-charcoal md:text-3xl">
-                Ready to partner with {SITE.name}?
+                Ready to connect with {SITE.name}?
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-muted">
                 Share your requirements for manufacturing, wholesale supply, or

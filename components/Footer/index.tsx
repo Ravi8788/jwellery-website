@@ -20,7 +20,7 @@ export function Footer() {
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/65">
               Connecting India&apos;s finest gold craftsmanship to retailers and
-              partners nationwide. Premium quality, purity, and trust since{" "}
+              dealers nationwide. Premium quality, purity, and trust since{" "}
               {SITE.established}.
             </p>
           </div>

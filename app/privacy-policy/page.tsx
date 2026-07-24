@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
           <p>
             When you contact us, we may collect your name, email address, phone
             number, business details, and message content solely to respond to
-            your enquiry and support wholesale partnerships.
+            your enquiry and support wholesale enquiries.
           </p>
           <h3 className="font-display text-xl text-charcoal">How We Use Information</h3>
           <p>

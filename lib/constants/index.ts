@@ -122,12 +122,12 @@ export const TRUST_PILLARS = [
   { title: "Trust & Purity", subtitle: "Transparent quality" },
   { title: "Expertly Crafted", subtitle: "Master artisans" },
   { title: "Since 1985", subtitle: "40+ years legacy" },
-  { title: "Trusted Generations", subtitle: "Retail partners across India" },
+  { title: "Trusted Generations", subtitle: "Retail clients across India" },
 ] as const;
 
 export const COMPANY_OVERVIEW = `BBS GOLD is a trusted name in the gold jewellery industry, proudly carrying a legacy of excellence since 1985. What began as a small venture with limited capital and challenging circumstances has today grown into a well-established manufacturing and wholesale gold jewellery business with an annual turnover running into crores.
 
-For more than four decades, BBS GOLD has been committed to delivering superior craftsmanship, exceptional quality, and complete customer satisfaction. Our journey is a testament to dedication, integrity, and the unwavering trust of our customers and business partners across generations.
+For more than four decades, BBS GOLD has been committed to delivering superior craftsmanship, exceptional quality, and complete customer satisfaction. Our journey is a testament to dedication, integrity, and the unwavering trust of our customers and business clients across generations.
 
 With over 40 years of industry experience, we have built our reputation by combining traditional jewellery-making techniques with modern manufacturing processes. Today, BBS GOLD stands as a symbol of trust, purity, and excellence in the wholesale gold jewellery market.`;
 
@@ -141,7 +141,7 @@ export const ABOUT_HIGHLIGHTS = [
   "Established in 1985",
   "More than 40 years of experience in the gold jewellery industry",
   "Gold Jewellery Manufacturer and Wholesaler",
-  "Trusted by jewellery retailers and business partners across India",
+  "Trusted by jewellery retailers and business clients across India",
   "Multi-crore turnover business",
   "Known for premium quality, purity, and exclusive designs",
 ] as const;
@@ -153,7 +153,7 @@ export const MISSION = {
     "Deliver exceptional quality gold jewellery.",
     "Maintain the highest standards of purity and craftsmanship.",
     "Offer an extensive range of exclusive and innovative designs.",
-    "Build long-term relationships with our customers and retail partners.",
+    "Build long-term relationships with our customers and retail clients.",
     "Continuously innovate while preserving the heritage of Indian jewellery craftsmanship.",
     "Expand BBS GOLD's presence across the Indian jewellery market.",
   ],
@@ -172,7 +172,7 @@ export const CORE_VALUES: ValueItem[] = [
   {
     title: "Purity",
     description:
-      "We are dedicated to offering gold jewellery that meets the highest purity standards, ensuring complete confidence for our customers and retail partners.",
+      "We are dedicated to offering gold jewellery that meets the highest purity standards, ensuring complete confidence for our customers and retail clients.",
   },
   {
     title: "Quality",
@@ -202,7 +202,7 @@ Whether it is traditional designs or contemporary collections, every BBS GOLD cr
 export const OWNER_MESSAGE = {
   quote: `At BBS GOLD, we believe that jewellery is not merely a product-it is a legacy that carries emotions, traditions, and trust. Since 1985, our commitment has remained unchanged: to provide the finest quality gold jewellery with honesty, purity, and excellence.
 
-Every piece we manufacture reflects our passion for craftsmanship and our dedication to serving our customers and business partners with integrity. The trust we have earned over the past four decades is our greatest achievement and our biggest responsibility.
+Every piece we manufacture reflects our passion for craftsmanship and our dedication to serving our customers and business clients with integrity. The trust we have earned over the past four decades is our greatest achievement and our biggest responsibility.
 
 We sincerely thank everyone who has been a part of our journey. Your faith in BBS GOLD inspires us to continue creating timeless jewellery and building a brand that future generations can proudly trust.
 
@@ -243,7 +243,7 @@ export const SERVICES: ServiceItem[] = [
     id: "wholesale",
     title: "Wholesale Supply",
     description:
-      "Reliable wholesale supply for jewellery retailers, dealers, and business partners across India.",
+      "Reliable wholesale supply for jewellery retailers, dealers, and business clients across India.",
     icon: "package",
   },
   {
@@ -262,7 +262,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: "retail-support",
-    title: "Retail Partner Support",
+    title: "Retail Support",
     description:
       "Dedicated support for retail jewellery stores - from assortment planning to ongoing supply.",
     icon: "handshake",
@@ -278,7 +278,7 @@ export const SERVICES: ServiceItem[] = [
     id: "design",
     title: "Design Consultation",
     description:
-      "Expert design consultation to help partners curate collections that sell.",
+      "Expert design consultation to help retailers curate collections that sell.",
     icon: "pen-tool",
   },
 ];
@@ -310,11 +310,11 @@ export const WHY_CHOOSE: WhyChooseItem[] = [
   },
   {
     title: "Transparent Practices",
-    description: "Clear, honest business practices that partners can rely on.",
+    description: "Clear, honest business practices that clients can rely on.",
   },
   {
     title: "Customer-Centric Approach",
-    description: "Long-term partnerships focused on mutual growth and satisfaction.",
+    description: "Long-term relationships focused on mutual growth and satisfaction.",
   },
 ];
 
@@ -322,7 +322,7 @@ export const STATS = [
   { value: "1985", label: "Established" },
   { value: "40+", label: "Years of Excellence" },
   { value: "Multi-Crore", label: "Manufacturing Business" },
-  { value: "Pan-India", label: "Retail Partners" },
+  { value: "Pan-India", label: "Retail Clients" },
 ] as const;
 
 export function getWhatsAppUrl(message?: string) {

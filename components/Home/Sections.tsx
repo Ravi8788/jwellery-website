@@ -93,7 +93,7 @@ export function WhyChoose() {
         <SectionHeader
           eyebrow="Why Us"
           title="Why Choose BBS GOLD?"
-          description="A multi-crore manufacturing and wholesale partner built on trust, purity, and long-term relationships."
+          description="A multi-crore manufacturing and wholesale house built on trust, purity, and long-term relationships."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {WHY_CHOOSE.map((item, i) => (

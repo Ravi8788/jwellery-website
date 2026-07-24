@@ -13,7 +13,7 @@ import { Button } from "@/components/Buttons";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${SITE.name} for wholesale enquiries, bulk orders, and retail partner support. Call, email, or WhatsApp us.`,
+  description: `Contact ${SITE.name} for wholesale enquiries, bulk orders, and retail support. Call, email, or WhatsApp us.`,
 };
 
 function ContactFormFallback() {
@@ -31,7 +31,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in Touch"
         title="Contact BBS GOLD"
-        description="Connect with our team for wholesale enquiries, manufacturing partnerships, and collection details."
+        description="Connect with our team for wholesale enquiries, manufacturing enquiries, and collection details."
       />
       <section className="bg-background section-padding !pt-12">
       <div className="container-luxury">

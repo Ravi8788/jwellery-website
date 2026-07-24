@@ -52,7 +52,7 @@ export function ContactForm() {
         Send an Enquiry
       </h2>
       <p className="mt-2 text-sm text-muted">
-        Retail stores, dealers, and partners - we typically respond within one
+        Retail stores, dealers, and dealers - we typically respond within one
         business day. Or email{" "}
         <a href={`mailto:${SITE.email}`} className="text-gold hover:underline">
           {SITE.email}
@@ -138,7 +138,7 @@ export function ContactForm() {
             <option>Wholesale Enquiry</option>
             <option>Bulk Order</option>
             <option>Custom Manufacturing</option>
-            <option>Retail Partner Support</option>
+            <option>Retail Support</option>
             <option>Design Consultation</option>
             <option>General Inquiry</option>
           </select>

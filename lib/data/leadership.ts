@@ -30,7 +30,7 @@ export const LEADERSHIP_INTRO = {
   subtitle:
     "The visionaries driving BBS Gold forward with over four decades of excellence.",
   philosophy:
-    "At BBS Gold, leadership is rooted in trust, craftsmanship, and long-term partnership. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward-driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
+    "At BBS Gold, leadership is rooted in trust, craftsmanship, and long-term trust. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward-driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
 } as const;
 
 export const FOUNDERS: LeadershipMember[] = [
@@ -56,7 +56,7 @@ export const FOUNDERS: LeadershipMember[] = [
     brandLabel: "BBS GOLD",
     image: "/images/team/milind-subhash-bagade.webp",
     hasPortrait: true,
-    focus: "Craftsmanship, trust & partner relationships",
+    focus: "Craftsmanship, trust & client relationships",
     highlights: [
       "Co-founded BBS Gold in 1985",
       "Championed quality craftsmanship",
@@ -73,7 +73,7 @@ export const MANAGING_DIRECTORS: LeadershipMember[] = [
     brandLabel: "Bagade Bandhu Saraf",
     image: "/images/team/abhishek-santosh-bagade.webp",
     hasPortrait: true,
-    focus: "Growth, innovation & retail partnerships",
+    focus: "Growth, innovation & retail relationships",
     highlights: [
       "Leads BBS Gold expansion and innovation",
       "Strengthens wholesale capabilities",
@@ -116,13 +116,13 @@ export const COMPANY_TIMELINE = [
     year: "2000s",
     title: "Scale & Trust",
     description:
-      "Expanded collections and stronger retail partnerships while preserving hallmark standards of purity and finishing.",
+      "Expanded collections and stronger retail relationships while preserving hallmark standards of purity and finishing.",
   },
   {
     year: "2010s",
     title: "Modern Excellence",
     description:
-      "Traditional artistry meets refined production systems-delivering consistency for partners at scale.",
+      "Traditional artistry meets refined production systems-delivering consistency for clients at scale.",
   },
   {
     year: "Today",
@@ -145,7 +145,7 @@ export const MANUFACTURING_EXCELLENCE = {
     {
       title: "Purity First",
       description:
-        "Every piece is manufactured to exacting purity and finishing standards our retail partners can trust.",
+        "Every piece is manufactured to exacting purity and finishing standards our retail clients can trust.",
     },
     {
       title: "Scale Without Compromise",
@@ -153,7 +153,7 @@ export const MANUFACTURING_EXCELLENCE = {
         "Bulk-ready capacity with the same attention to detail that defined our earliest creations.",
     },
     {
-      title: "Partner-Ready Supply",
+      title: "Wholesale-Ready Supply",
       description:
         "Reliable wholesale fulfilment designed for jewellery retailers and dealers across India.",
     },
