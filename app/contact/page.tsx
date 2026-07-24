@@ -23,7 +23,8 @@ function ContactFormFallback() {
 }
 
 export default function ContactPage() {
-  const mapQuery = encodeURIComponent(SITE.address);
+  const mapEmbedSrc = `https://maps.google.com/maps?q=${SITE.map.lat},${SITE.map.lng}&hl=en&z=${SITE.map.zoom}&ie=UTF8&iwloc=B&output=embed`;
+  const mapDirectionsUrl = SITE.map.url;
 
   return (
     <>
@@ -53,6 +54,14 @@ export default function ContactPage() {
                           <p key={line}>{line}</p>
                         ))}
                       </div>
+                      <a
+                        href={mapDirectionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex text-sm font-semibold text-maroon transition-colors hover:text-maroon-dark"
+                      >
+                        Get directions
+                      </a>
                     </div>
                   </li>
                   <li className="flex gap-4">
@@ -129,9 +138,9 @@ export default function ContactPage() {
 
               <div className="overflow-hidden border border-border bg-cream shadow-card">
                 <iframe
-                  title="BBS GOLD location map"
-                  src={`https://maps.google.com/maps?q=${mapQuery}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-                  className="h-64 w-full border-0 md:h-72"
+                  title="BBS GOLD exact location — BBS Heights, Satara Road, Satara"
+                  src={mapEmbedSrc}
+                  className="h-72 w-full border-0 xs:h-80 sm:h-96 md:h-[28rem]"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   allowFullScreen

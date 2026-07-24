@@ -18,8 +18,16 @@ export const SITE = {
   phones: ["+91 97303 46525", "+91 91308 14425"],
   whatsapp: "919730346525",
   whatsappMessage: "Hi BBS Gold!",
-  address: "BBS Heights, First Floor, Satara Road",
-  addressLines: ["BBS Heights", "First Floor", "Satara Road"],
+  address: "BBS Heights, First Floor, Satara Road, Satara, Maharashtra",
+  addressLines: ["BBS Heights", "First Floor", "Satara Road", "Satara, Maharashtra"],
+  /** Exact Google Maps place (Bagade Bandhu Saraf / BBS Heights, Satara) */
+  map: {
+    query: "Bagade Bandhu Saraf, Satara Road, Satara",
+    lat: 17.767171,
+    lng: 74.113686,
+    zoom: 17,
+    url: "https://maps.app.goo.gl/34dkZExVonM6xUkr8",
+  },
   established: 1985,
   experience: "40+ Years",
   industry: "Gold Jewellery Manufacturing & Wholesale",

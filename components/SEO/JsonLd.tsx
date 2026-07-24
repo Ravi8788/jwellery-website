@@ -32,8 +32,16 @@ export function JsonLd() {
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
+      addressLocality: "Satara",
+      addressRegion: "Maharashtra",
       streetAddress: SITE.address,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE.map.lat,
+      longitude: SITE.map.lng,
+    },
+    hasMap: SITE.map.url,
     foundingDate: String(SITE.established),
     priceRange: "$$$$",
     openingHoursSpecification: [
