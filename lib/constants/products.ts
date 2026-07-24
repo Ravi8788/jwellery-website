@@ -1,11 +1,11 @@
-import type { Collection } from "@/lib/types";
+﻿import type { Collection } from "@/lib/types";
 
 /** 32 wholesale product images supplied by client */
 export const PRODUCTS: Collection[] = [
   {
     id: "teardrop-drop-earrings",
     name: "Teardrop Gold Drop Earrings",
-    description: "Minimal open-frame teardrop earrings with polished gold bead detail — ideal for daily wear wholesale.",
+    description: "Minimal open-frame teardrop earrings with polished gold bead detail - ideal for daily wear wholesale.",
     image: "/images/products/product-01.webp",
     category: "earrings",
   },
@@ -33,7 +33,7 @@ export const PRODUCTS: Collection[] = [
   {
     id: "classic-polished-bangles",
     name: "Classic Polished Gold Bangles",
-    description: "Timeless smooth tubular gold bangles — a wholesale essential for every retail counter.",
+    description: "Timeless smooth tubular gold bangles - a wholesale essential for every retail counter.",
     image: "/images/products/product-05.webp",
     category: "bangles",
   },
@@ -61,7 +61,7 @@ export const PRODUCTS: Collection[] = [
   {
     id: "floral-engraved-bangles",
     name: "Floral Engraved Gold Bangles",
-    description: "Traditional floral and vine motif bangles with beaded borders — heritage wholesale favourite.",
+    description: "Traditional floral and vine motif bangles with beaded borders - heritage wholesale favourite.",
     image: "/images/products/product-09.webp",
     category: "bangles",
   },
@@ -75,21 +75,21 @@ export const PRODUCTS: Collection[] = [
   {
     id: "geometric-rhombus-earrings",
     name: "Geometric Rhombus Drop Earrings",
-    description: "Contemporary gold rhombus drops with clear stone accents — modern retail appeal.",
+    description: "Contemporary gold rhombus drops with clear stone accents - modern retail appeal.",
     image: "/images/products/product-11.webp",
     category: "earrings",
   },
   {
     id: "mens-octagon-signet",
     name: "Men's Octagon Diamond Signet",
-    description: "Architectural brushed gold signet with recessed diamond — premium men's wholesale line.",
+    description: "Architectural brushed gold signet with recessed diamond - premium men's wholesale line.",
     image: "/images/products/product-12.webp",
     category: "rings",
   },
   {
     id: "floral-halo-diamond-ring",
     name: "Floral Halo Diamond Ring",
-    description: "Blooming floral halo centre with twisted pavé shank — bridal and occasion wear.",
+    description: "Blooming floral halo centre with twisted pavé shank - bridal and occasion wear.",
     image: "/images/products/product-13.webp",
     category: "rings",
   },
@@ -103,7 +103,7 @@ export const PRODUCTS: Collection[] = [
   {
     id: "split-shank-solitaire",
     name: "Split Shank Solitaire Ring",
-    description: "Six-prong solitaire on a diamond-lined split shank — classic bridal bestseller.",
+    description: "Six-prong solitaire on a diamond-lined split shank - classic bridal bestseller.",
     image: "/images/products/product-15.webp",
     category: "rings",
   },
@@ -138,14 +138,14 @@ export const PRODUCTS: Collection[] = [
   {
     id: "mens-brushed-signet-ring",
     name: "Men's Brushed Diamond Signet",
-    description: "Square brushed face with centre diamond and grooved shoulders — men's statement ring.",
+    description: "Square brushed face with centre diamond and grooved shoulders - men's statement ring.",
     image: "/images/products/product-20.webp",
     category: "rings",
   },
   {
     id: "figaro-gold-chain",
     name: "Figaro Gold Chain",
-    description: "Polished figaro-link yellow gold chain — high-demand wholesale staple.",
+    description: "Polished figaro-link yellow gold chain - high-demand wholesale staple.",
     image: "/images/products/product-21.webp",
     category: "chains",
   },
@@ -173,7 +173,7 @@ export const PRODUCTS: Collection[] = [
   {
     id: "popcorn-gold-chain",
     name: "Popcorn Weave Gold Chain",
-    description: "Textured popcorn/wheat-link gold chain — lightweight daily wear wholesale.",
+    description: "Textured popcorn/wheat-link gold chain - lightweight daily wear wholesale.",
     image: "/images/products/product-25.webp",
     category: "chains",
   },
@@ -194,7 +194,7 @@ export const PRODUCTS: Collection[] = [
   {
     id: "rope-gold-chain",
     name: "Rope Twist Gold Chain",
-    description: "Classic rope-link yellow gold chain with lobster clasp — versatile wholesale piece.",
+    description: "Classic rope-link yellow gold chain with lobster clasp - versatile wholesale piece.",
     image: "/images/products/product-28.webp",
     category: "chains",
   },

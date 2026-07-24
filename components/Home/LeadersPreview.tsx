@@ -33,31 +33,37 @@ function LeaderInfoCard({
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.65, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group flex h-full flex-col rounded-2xl border bg-white p-6 shadow-[0_8px_28px_rgba(26,26,26,0.06)] transition-all duration-300 hover:-translate-y-1 sm:p-7",
+        "group flex h-full flex-col rounded-2xl border bg-white p-5 shadow-[0_8px_28px_rgba(26,26,26,0.06)] transition-all duration-300 hover:-translate-y-1 xs:p-6 sm:p-7",
         isFounder
           ? "border-[#D4AF37]/35 hover:border-[#D4AF37] hover:shadow-[0_16px_40px_rgba(212,175,55,0.18)]"
           : "border-[#E8A0B0]/45 hover:border-[#C45A6E] hover:shadow-[0_16px_40px_rgba(196,90,110,0.16)]"
       )}
     >
-      <LeaderPortrait
-        src={member.image}
-        alt={`${member.name}, ${member.designation} at BBS Gold`}
-        tone={tone}
-        size="sm"
-        facePosition={member.facePosition}
-        className="mb-5"
-      />
+      <div className="mb-5 flex items-center gap-4 xs:gap-5 sm:gap-5">
+        <LeaderPortrait
+          src={member.image}
+          alt={`${member.name}, ${member.designation} at BBS Gold`}
+          tone={tone}
+          size="md"
+          facePosition={member.facePosition}
+        />
+        <div className="min-w-0 flex-1">
+          <h3 className="font-display text-lg leading-snug text-charcoal xs:text-xl sm:text-2xl">
+            {member.name}
+          </h3>
+          <p
+            className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] xs:text-[11px]"
+            style={{ color: accent }}
+          >
+            {member.designation}
+          </p>
+          <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted xs:text-[11px]">
+            {member.brandLabel}
+          </p>
+        </div>
+      </div>
 
-      <h3 className="font-display text-xl text-charcoal sm:text-2xl">
-        {member.name}
-      </h3>
-      <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-        BBS Gold
-      </p>
-      <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em]" style={{ color: accent }}>
-        {member.designation}
-      </p>
-      <p className="mt-3 text-sm leading-relaxed text-muted">
+      <p className="text-sm leading-relaxed text-muted">
         {member.bio.length > 140 ? `${member.bio.slice(0, 140).trim()}…` : member.bio}
       </p>
 

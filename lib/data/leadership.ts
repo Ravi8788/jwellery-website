@@ -12,6 +12,8 @@ export type LeadershipMember = {
   id: string;
   name: string;
   designation: LeadershipRole;
+  /** Shown under designation - e.g. "Bagade Bandhu Saraf" or "BBS GOLD" */
+  brandLabel: string;
   image: string;
   bio: string;
   /** Short points for home leader cards */
@@ -28,7 +30,7 @@ export const LEADERSHIP_INTRO = {
   subtitle:
     "The visionaries driving BBS Gold forward with over four decades of excellence.",
   philosophy:
-    "At BBS Gold, leadership is rooted in trust, craftsmanship, and long-term partnership. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward—driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
+    "At BBS Gold, leadership is rooted in trust, craftsmanship, and long-term partnership. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward-driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
 } as const;
 
 export const FOUNDERS: LeadershipMember[] = [
@@ -36,6 +38,7 @@ export const FOUNDERS: LeadershipMember[] = [
     id: "santosh-subhash-bagade",
     name: "Santosh Subhash Bagade",
     designation: "Founder",
+    brandLabel: "Bagade Bandhu Saraf",
     image: "/images/team/santosh-bagade.webp",
     hasPortrait: true,
     focus: "Heritage, trust & wholesale foundations",
@@ -44,12 +47,13 @@ export const FOUNDERS: LeadershipMember[] = [
       "Built a culture of purity and integrity",
       "Guided multi-decade wholesale growth",
     ],
-    bio: `Santosh Subhash Bagade laid the foundation of BBS Gold in 1985 with a clear vision—to craft gold jewellery defined by purity, authenticity, and lasting trust. Through decades of disciplined hard work and unwavering dedication, he transformed a modest beginning into a respected manufacturing and wholesale house.`,
+    bio: `Santosh Subhash Bagade laid the foundation of BBS Gold in 1985 with a clear vision-to craft gold jewellery defined by purity, authenticity, and lasting trust. Through decades of disciplined hard work and unwavering dedication, he transformed a modest beginning into a respected manufacturing and wholesale house.`,
   },
   {
     id: "milind-subhash-bagade",
     name: "Milind Subhash Bagade",
     designation: "Founder",
+    brandLabel: "BBS GOLD",
     image: "/images/team/milind-subhash-bagade.webp",
     hasPortrait: true,
     focus: "Craftsmanship, trust & partner relationships",
@@ -67,6 +71,7 @@ export const MANAGING_DIRECTORS: LeadershipMember[] = [
     id: "abhishek-santosh-bagade",
     name: "Abhishek Santosh Bagade",
     designation: "Managing Director",
+    brandLabel: "Bagade Bandhu Saraf",
     image: "/images/team/abhishek-santosh-bagade.webp",
     hasPortrait: true,
     focus: "Growth, innovation & retail partnerships",
@@ -75,12 +80,13 @@ export const MANAGING_DIRECTORS: LeadershipMember[] = [
       "Strengthens wholesale capabilities",
       "Upholds purity and craftsmanship standards",
     ],
-    bio: `Abhishek Santosh Bagade is Managing Director of BBS Gold, leading the next chapter—driving growth, design innovation, and manufacturing excellence while honouring the legacy built since 1985.`,
+    bio: `Abhishek Santosh Bagade is Managing Director of BBS Gold, leading the next chapter-driving growth, design innovation, and manufacturing excellence while honouring the legacy built since 1985.`,
   },
   {
     id: "tanmay-milind-bagade",
     name: "Tanmay Milind Bagade",
     designation: "Managing Director",
+    brandLabel: "BBS GOLD",
     image: "/images/team/tanmay-milind-bagade.webp",
     hasPortrait: true,
     facePosition: "50% 42%",
@@ -99,7 +105,7 @@ export const COMPANY_TIMELINE = [
     year: "1985",
     title: "Foundation",
     description:
-      "BBS Gold begins its journey in 1985—built on hard work, trust, and a commitment to pure gold craftsmanship.",
+      "BBS Gold begins its journey in 1985-built on hard work, trust, and a commitment to pure gold craftsmanship.",
   },
   {
     year: "1990s",
@@ -117,7 +123,7 @@ export const COMPANY_TIMELINE = [
     year: "2010s",
     title: "Modern Excellence",
     description:
-      "Traditional artistry meets refined production systems—delivering consistency for partners at scale.",
+      "Traditional artistry meets refined production systems-delivering consistency for partners at scale.",
   },
   {
     year: "Today",

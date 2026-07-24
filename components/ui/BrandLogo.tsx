@@ -12,6 +12,8 @@ type BrandLogoProps = {
   /** Pass `false` to render without a link wrapper */
   href?: string | false;
   priority?: boolean;
+  /** Show bold “BBS Gold” text beside the logo mark */
+  showWordmark?: boolean;
 };
 
 const SIZE = {
@@ -20,16 +22,23 @@ const SIZE = {
   lg: "h-14 w-auto sm:h-16 md:h-20",
 } as const;
 
+const WORDMARK = {
+  sm: "text-sm xs:text-base",
+  md: "text-base xs:text-lg sm:text-xl",
+  lg: "text-xl sm:text-2xl",
+} as const;
+
 export function BrandLogo({
   className,
   size = "md",
   href = "/",
   priority = false,
+  showWordmark = false,
 }: BrandLogoProps) {
   const image = (
     <span
       className={cn(
-        "inline-flex items-center rounded-sm bg-white/95 px-1.5 py-0.5",
+        "inline-flex items-center gap-2 bg-transparent xs:gap-2.5",
         className
       )}
     >
@@ -46,6 +55,16 @@ export function BrandLogo({
           SIZE[size]
         )}
       />
+      {showWordmark && (
+        <span
+          className={cn(
+            "font-display font-bold tracking-wide text-charcoal",
+            WORDMARK[size]
+          )}
+        >
+          BBS Gold
+        </span>
+      )}
     </span>
   );
 

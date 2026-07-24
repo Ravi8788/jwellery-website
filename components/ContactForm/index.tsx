@@ -33,7 +33,7 @@ export function ContactForm() {
     }
 
     setLoading(true);
-    // Client-ready form — wire to API/email service when backend is available
+    // Client-ready form - wire to API/email service when backend is available
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     setSuccess(true);
@@ -52,7 +52,7 @@ export function ContactForm() {
         Send an Enquiry
       </h2>
       <p className="mt-2 text-sm text-muted">
-        Retail stores, dealers, and partners — we typically respond within one
+        Retail stores, dealers, and partners - we typically respond within one
         business day. Or email{" "}
         <a href={`mailto:${SITE.email}`} className="text-gold hover:underline">
           {SITE.email}

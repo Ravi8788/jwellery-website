@@ -21,7 +21,7 @@ export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
         <div className="relative aspect-square overflow-hidden bg-cream">
           <SoftImage
             src={collection.image}
-            alt={`${collection.name} — BBS GOLD wholesale collection`}
+            alt={`${collection.name} - BBS GOLD wholesale collection`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"

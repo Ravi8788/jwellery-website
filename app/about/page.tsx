@@ -22,7 +22,7 @@ import { ContactCTA } from "@/components/Home/AboutPreview";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${SITE.name} — established ${SITE.established}, ${SITE.experience} of gold jewellery manufacturing and wholesale excellence.`,
+  description: `Learn about ${SITE.name} - established ${SITE.established}, ${SITE.experience} of gold jewellery manufacturing and wholesale excellence.`,
 };
 
 export default function AboutPage() {
@@ -185,7 +185,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership — Founders + Managing Directors */}
+      {/* Leadership - Founders + Managing Directors */}
       <LeadershipSection />
 
       {/* Craftsmanship */}
@@ -227,7 +227,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Our Journey"
             title="Timeline"
-            description="From 1985 to the present — milestones that shaped BBS GOLD."
+            description="From 1985 to the present - milestones that shaped BBS GOLD."
           />
           <div className="relative mx-auto max-w-3xl">
             <div

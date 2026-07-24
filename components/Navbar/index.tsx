@@ -34,7 +34,7 @@ export function Navbar() {
           className="container-luxury flex h-full items-center justify-between gap-3"
           aria-label="Main navigation"
         >
-          <BrandLogo size="md" priority />
+          <BrandLogo size="md" priority showWordmark />
 
           <div className="hidden items-center gap-1 lg:flex xl:gap-2">
             {NAV_LINKS.map((item) => {

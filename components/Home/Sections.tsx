@@ -22,7 +22,7 @@ export function FeaturedCollections() {
         <SectionHeader
           eyebrow="Collections"
           title="Featured Collections"
-          description="Premium wholesale ranges crafted for jewellery retailers and dealers — from bridal sets to daily wear."
+          description="Premium wholesale ranges crafted for jewellery retailers and dealers - from bridal sets to daily wear."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((collection, index) => (

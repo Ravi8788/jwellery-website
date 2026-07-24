@@ -105,26 +105,31 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container-luxury flex flex-col gap-4 py-5 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
-            <p>
+        <div className="container-luxury flex flex-col items-start gap-5 py-5 text-left text-sm text-white/55 sm:gap-4 md:gap-5 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
+            <p className="text-left">
               © {year} {SITE.name}. All rights reserved.
             </p>
-            <span className="hidden text-white/20 sm:inline">|</span>
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <span className="hidden text-white/20 sm:inline" aria-hidden>
+              |
+            </span>
+            <nav
+              aria-label="Legal"
+              className="flex w-full flex-col gap-2.5 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-1"
+            >
               {FOOTER_LINKS.legal.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition-colors hover:text-gold"
+                  className="text-left transition-colors hover:text-gold"
                 >
                   {link.label}
                 </Link>
               ))}
-            </div>
+            </nav>
           </div>
 
-          <p className="text-center lg:text-left">
+          <p className="text-left">
             Designed &amp; Developed by{" "}
             <a
               href={SITE.developer.url}
@@ -136,7 +141,7 @@ export function Footer() {
             </a>
           </p>
 
-          <div className="flex items-center justify-center gap-3 lg:justify-end">
+          <div className="flex items-center justify-start gap-3 lg:justify-end">
             <a
               href={SITE.social.instagram}
               target="_blank"

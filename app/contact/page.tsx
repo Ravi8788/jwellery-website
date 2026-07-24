@@ -138,7 +138,7 @@ export default function ContactPage() {
 
               <div className="overflow-hidden border border-border bg-cream shadow-card">
                 <iframe
-                  title="BBS GOLD exact location — BBS Heights, Satara Road, Satara"
+                  title="BBS GOLD exact location - BBS Heights, Satara Road, Satara"
                   src={mapEmbedSrc}
                   className="h-72 w-full border-0 xs:h-80 sm:h-96 md:h-[28rem]"
                   loading="lazy"

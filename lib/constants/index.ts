@@ -19,7 +19,7 @@ export const SITE = {
   whatsapp: "919730346525",
   whatsappMessage: "Hi BBS Gold!",
   address: "BBS Heights, First Floor, Satara Road, Satara, Maharashtra",
-  addressLines: ["BBS Heights", "First Floor", "Satara Road", "Satara, Maharashtra"],
+  addressLines: ["BBS Heights, First Floor", "Satara Road, Satara, Maharashtra"],
   /** Exact Google Maps place (Bagade Bandhu Saraf / BBS Heights, Satara) */
   map: {
     query: "Bagade Bandhu Saraf, Satara Road, Satara",
@@ -73,46 +73,46 @@ export const FOOTER_LINKS = {
 } as const;
 
 export const BUSINESS_HOURS = [
-  { days: "Monday – Saturday", hours: "10:00 AM – 7:00 PM" },
+  { days: "Monday - Saturday", hours: "10:00 AM - 7:00 PM" },
   { days: "Sunday", hours: "By Appointment" },
 ] as const;
 
-/** Homepage hero banners (BBS GOLD creatives) — full artwork, no crop */
+/** Homepage hero banners (BBS GOLD creatives) - full artwork, no crop */
 export const HERO_BANNERS = [
   {
     id: "rings-dark",
     src: "/images/banners/banner-1.webp",
-    alt: "BBS Gold — pure gold rings, wholesaler of exclusive gold ornaments since 1985",
+    alt: "BBS Gold - pure gold rings, wholesaler of exclusive gold ornaments since 1985",
     title: "Pure Gold",
   },
   {
     id: "chain-cream",
     src: "/images/banners/banner-2.webp",
-    alt: "BBS Gold — elegant gold chain on cream, wholesaler since 1985",
+    alt: "BBS Gold - elegant gold chain on cream, wholesaler since 1985",
     title: "Quiet Luxury",
   },
   {
     id: "bangles-navy",
     src: "/images/banners/banner-3.webp",
-    alt: "BBS Gold — legacy of trust, crafted for generations",
+    alt: "BBS Gold - legacy of trust, crafted for generations",
     title: "Legacy of Trust",
   },
   {
     id: "diya-cream",
     src: "/images/banners/banner-4.webp",
-    alt: "BBS Gold — timeless values, treasured forever",
+    alt: "BBS Gold - timeless values, treasured forever",
     title: "Timeless Values",
   },
   {
     id: "earrings-olive",
     src: "/images/banners/banner-5.webp",
-    alt: "BBS Gold — expertly crafted gold earrings since 1985",
+    alt: "BBS Gold - expertly crafted gold earrings since 1985",
     title: "Expertly Crafted",
   },
   {
     id: "bangle-emerald",
     src: "/images/banners/banner-6.webp",
-    alt: "BBS Gold — where tradition meets timeless beauty",
+    alt: "BBS Gold - where tradition meets timeless beauty",
     title: "Tradition & Beauty",
   },
 ] as const;
@@ -131,7 +131,7 @@ For more than four decades, BBS GOLD has been committed to delivering superior c
 
 With over 40 years of industry experience, we have built our reputation by combining traditional jewellery-making techniques with modern manufacturing processes. Today, BBS GOLD stands as a symbol of trust, purity, and excellence in the wholesale gold jewellery market.`;
 
-export const OUR_STORY = `The foundation of BBS GOLD was laid in 1985 with a simple vision—to create high-quality gold jewellery that reflects authenticity, elegance, and value. Despite beginning with minimal resources and facing numerous challenges, our commitment to quality and customer relationships helped us steadily grow into a recognised and respected jewellery manufacturer and wholesaler.
+export const OUR_STORY = `The foundation of BBS GOLD was laid in 1985 with a simple vision-to create high-quality gold jewellery that reflects authenticity, elegance, and value. Despite beginning with minimal resources and facing numerous challenges, our commitment to quality and customer relationships helped us steadily grow into a recognised and respected jewellery manufacturer and wholesaler.
 
 Over the years, we have expanded our capabilities and product offerings while staying true to our core values. The trust and support of our customers have enabled us to achieve remarkable growth and establish a strong presence in the gold jewellery industry.
 
@@ -200,7 +200,7 @@ Every ornament is carefully designed and manufactured with meticulous attention 
 Whether it is traditional designs or contemporary collections, every BBS GOLD creation represents excellence and perfection.`;
 
 export const OWNER_MESSAGE = {
-  quote: `At BBS GOLD, we believe that jewellery is not merely a product—it is a legacy that carries emotions, traditions, and trust. Since 1985, our commitment has remained unchanged: to provide the finest quality gold jewellery with honesty, purity, and excellence.
+  quote: `At BBS GOLD, we believe that jewellery is not merely a product-it is a legacy that carries emotions, traditions, and trust. Since 1985, our commitment has remained unchanged: to provide the finest quality gold jewellery with honesty, purity, and excellence.
 
 Every piece we manufacture reflects our passion for craftsmanship and our dedication to serving our customers and business partners with integrity. The trust we have earned over the past four decades is our greatest achievement and our biggest responsibility.
 
@@ -228,7 +228,7 @@ export {
   FEATURED_PRODUCT_IDS,
 } from "./products";
 
-/** Alias used across pages — full 32-piece wholesale catalogue */
+/** Alias used across pages - full 32-piece wholesale catalogue */
 export { PRODUCTS as COLLECTIONS, FEATURED_PRODUCT_IDS as FEATURED_COLLECTION_IDS } from "./products";
 
 export const SERVICES: ServiceItem[] = [
@@ -264,7 +264,7 @@ export const SERVICES: ServiceItem[] = [
     id: "retail-support",
     title: "Retail Partner Support",
     description:
-      "Dedicated support for retail jewellery stores — from assortment planning to ongoing supply.",
+      "Dedicated support for retail jewellery stores - from assortment planning to ongoing supply.",
     icon: "handshake",
   },
   {

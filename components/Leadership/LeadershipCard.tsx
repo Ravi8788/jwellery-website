@@ -72,17 +72,17 @@ export function LeadershipCard({
         {member.name}
       </h3>
 
-      <p className="relative mt-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
-        BBS Gold
-      </p>
-
       <p
         className={cn(
-          "relative mt-1.5 text-[11px] font-semibold uppercase tracking-[0.22em]",
+          "relative mt-2 text-[11px] font-semibold uppercase tracking-[0.22em]",
           isFounders ? "text-[#D4AF37]" : "text-[#C45A6E]"
         )}
       >
         {member.designation}
+      </p>
+
+      <p className="relative mt-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+        {member.brandLabel}
       </p>
 
       <div

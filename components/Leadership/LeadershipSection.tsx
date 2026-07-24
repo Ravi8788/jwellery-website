@@ -44,7 +44,7 @@ export function LeadershipSection() {
           </p>
         </motion.div>
 
-        {/* Founders — gold highlight */}
+        {/* Founders - gold highlight */}
         <div className="mb-16 md:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ export function LeadershipSection() {
           </div>
         </div>
 
-        {/* Managing Directors — soft pink highlight */}
+        {/* Managing Directors - soft pink highlight */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

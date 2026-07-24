@@ -1,4 +1,4 @@
-# BBS GOLD — Luxury Gold Jewellery Website
+# BBS GOLD - Luxury Gold Jewellery Website
 
 Premium manufacturing & wholesale website for **BBS GOLD**, established 1985.
 
@@ -34,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Content & images
 
-Brand copy lives in `lib/constants/index.ts`. Collection and director images currently use placeholders — replace `PLACEHOLDER_IMAGES` and each collection `image` URL when client assets are ready.
+Brand copy lives in `lib/constants/index.ts`. Collection and director images currently use placeholders - replace `PLACEHOLDER_IMAGES` and each collection `image` URL when client assets are ready.
 
 Update phone, email, address, and WhatsApp number in `SITE` before production launch.
 

@@ -72,7 +72,7 @@ export default function ServicesPage() {
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-muted">
                 Share your requirements for manufacturing, wholesale supply, or
-                custom designs — our team is ready to assist.
+                custom designs - our team is ready to assist.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Button href="/contact#form" className="!rounded-none">
