@@ -101,7 +101,7 @@ export function LeadersPreview() {
         <SectionHeader
           eyebrow="BBS Gold Leadership"
           title="Leaders of BBS Gold"
-          description="Meet the founders and managing directors guiding BBS Gold with trust, craftsmanship, and four decades of excellence."
+          description="Meet the founders and managing directors guiding Bagade Bandhu Saraf and BBS GOLD with trust, craftsmanship, and four decades of excellence."
         />
 
         <FadeIn>

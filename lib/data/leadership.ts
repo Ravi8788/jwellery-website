@@ -59,7 +59,6 @@ export const FOUNDERS: LeadershipMember[] = [
     focus: "Craftsmanship, trust & partner relationships",
     highlights: [
       "Co-founded BBS Gold in 1985",
-      "Strengthened trade partnerships",
       "Championed quality craftsmanship",
     ],
     bio: `Milind Subhash Bagade co-founded BBS Gold in 1985, helping establish the brand as a name synonymous with purity, trust, and fine craftsmanship. Through perseverance and a deep commitment to quality, he played a vital role in building the company’s foundations.`,
