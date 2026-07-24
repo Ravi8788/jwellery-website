@@ -24,6 +24,8 @@ export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
             alt={`${collection.name} - BBS GOLD wholesale collection`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+            quality={65}
+            priority={index < 2}
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <span className="absolute left-3 top-3 border border-gold/50 bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-maroon capitalize">

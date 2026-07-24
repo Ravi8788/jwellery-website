@@ -52,7 +52,7 @@ export function LeaderPortrait({
           alt={alt}
           fill
           sizes={SIZES_ATTR[size]}
-          quality={70}
+          quality={65}
           className={cn("object-cover", facePosition ? undefined : "object-top")}
           style={facePosition ? { objectPosition: facePosition } : undefined}
           fallbackSrc="/images/placeholders/director.svg"

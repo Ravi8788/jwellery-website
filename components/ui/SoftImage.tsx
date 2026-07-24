@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -36,6 +36,10 @@ export function SoftImage({
   const [current, setCurrent] = useState(src);
   const isSvg = current.endsWith(".svg");
 
+  useEffect(() => {
+    setCurrent(src);
+  }, [src]);
+
   return (
     <Image
       src={current}
@@ -43,10 +47,11 @@ export function SoftImage({
       fill={fill}
       width={fill ? undefined : width}
       height={fill ? undefined : height}
-      sizes={sizes ?? (fill ? "100vw" : undefined)}
+      sizes={sizes ?? (fill ? "(max-width: 768px) 100vw, 50vw" : undefined)}
       priority={priority}
       quality={quality}
       loading={priority ? undefined : loading ?? "lazy"}
+      decoding="async"
       unoptimized={isSvg}
       className={cn(className)}
       style={style}
