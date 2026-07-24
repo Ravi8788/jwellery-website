@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://bbsgold.com/sitemap.xml
+Sitemap: https://www.bbsgoldwholesaler.com/sitemap.xml

@@ -1,6 +1,6 @@
 # BBS GOLD — Luxury Gold Jewellery Website
 
-Premium manufacturing & wholesale website for **BBS GOLD** (Bagade Bandhu Saraf), established 1985.
+Premium manufacturing & wholesale website for **BBS GOLD**, established 1985.
 
 ## Stack
 

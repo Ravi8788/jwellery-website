@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { useScrollPosition } from "@/lib/hooks/useScrollPosition";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 import { cn } from "@/lib/utils";
 
 function isActivePath(pathname: string, href: string) {
@@ -23,28 +24,17 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 z-50 h-12 w-full border-b transition-all duration-300 xs:h-12 sm:h-12 md:h-14 lg:h-14 xl:h-14",
+          "fixed top-0 z-50 h-14 w-full border-b transition-all duration-300 sm:h-16 lg:h-[4.5rem]",
           scrolled
             ? "border-border bg-white/95 shadow-soft backdrop-blur-md"
-            : "border-border/70 bg-background-soft/95 backdrop-blur-sm"
+            : "border-border/70 bg-white/95 backdrop-blur-sm"
         )}
       >
         <nav
-          className="container-luxury flex h-full items-center justify-between"
+          className="container-luxury flex h-full items-center justify-between gap-3"
           aria-label="Main navigation"
         >
-          <Link
-            href="/"
-            className="group flex shrink-0 flex-col leading-tight"
-            aria-label={`${SITE.name} home`}
-          >
-            <span className="font-display text-base font-semibold tracking-[0.18em] text-charcoal transition-colors group-hover:text-maroon xs:text-base sm:text-lg md:text-lg lg:text-xl">
-              {SITE.name}
-            </span>
-            <span className="hidden text-[8px] uppercase tracking-[0.2em] text-muted xs:block sm:text-[8px] md:text-[9px]">
-              Since {SITE.established}
-            </span>
-          </Link>
+          <BrandLogo size="md" priority />
 
           <div className="hidden items-center gap-1 lg:flex xl:gap-2">
             {NAV_LINKS.map((item) => {
@@ -108,10 +98,8 @@ export function Navbar() {
               aria-modal="true"
               aria-label="Mobile navigation"
             >
-              <div className="flex items-center justify-between border-b border-border px-5 py-4">
-                <span className="font-display text-base tracking-[0.16em] text-charcoal">
-                  {SITE.name}
-                </span>
+              <div className="flex items-center justify-between border-b border-border px-5 py-3">
+                <BrandLogo size="sm" />
                 <button
                   type="button"
                   onClick={() => setMobileOpen(false)}

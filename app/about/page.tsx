@@ -22,7 +22,7 @@ import { ContactCTA } from "@/components/Home/AboutPreview";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${SITE.name} — established ${SITE.established}, ${SITE.experience} of gold jewellery manufacturing and wholesale excellence under ${SITE.parentCompany}.`,
+  description: `Learn about ${SITE.name} — established ${SITE.established}, ${SITE.experience} of gold jewellery manufacturing and wholesale excellence.`,
 };
 
 export default function AboutPage() {
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Legacy"
         title={`About ${SITE.name}`}
-        description={`Parent company ${SITE.parentCompany}. Established ${SITE.established} · ${SITE.experience} of excellence.`}
+        description={`Established ${SITE.established} · ${SITE.experience} of excellence.`}
       />
 
       {/* Company overview */}

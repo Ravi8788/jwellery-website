@@ -13,7 +13,7 @@ type CollectionCardProps = {
 };
 
 export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
-  const whatsappMessage = `Hi Bagade Bandhu Saraf!\n\nI would like to enquire about ${collection.name} for wholesale.`;
+  const whatsappMessage = `Hi BBS Gold!\n\nI would like to enquire about ${collection.name} for wholesale.`;
 
   return (
     <FadeIn delay={Math.min(index * 0.06, 0.36)}>
@@ -23,7 +23,7 @@ export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
             src={collection.image}
             alt={`${collection.name} — BBS GOLD wholesale collection`}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <span className="absolute left-3 top-3 border border-gold/50 bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-maroon capitalize">
@@ -39,7 +39,7 @@ export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
               {collection.description}
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 gap-2 xs:grid-cols-2">
             <Button
               href={getEnquiryUrl(collection.name)}
               size="sm"
@@ -58,7 +58,7 @@ export function CollectionCard({ collection, index = 0 }: CollectionCardProps) {
               aria-label={`WhatsApp enquire about ${collection.name}`}
             >
               <MessageCircle className="h-3.5 w-3.5 shrink-0" />
-              <span>WhatsApp</span>
+              <span className="xs:inline">WhatsApp</span>
             </Button>
           </div>
         </div>

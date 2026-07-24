@@ -21,7 +21,7 @@ export function FloatingWhatsApp() {
       href={getWhatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Chat with ${SITE.parentCompany} on WhatsApp`}
+      aria-label={`Chat with ${SITE.name} on WhatsApp`}
       className="fixed bottom-4 right-4 z-[60] flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(37,211,102,0.45)] transition-transform duration-300 hover:scale-110 hover:bg-[#20BD5A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold xs:bottom-5 xs:right-5 xs:h-14 xs:w-14 sm:h-14 sm:w-14 md:bottom-7 md:right-7 md:h-16 md:w-16"
     >
       <WhatsAppIcon className="h-8 w-8 md:h-9 md:w-9" />

@@ -7,11 +7,11 @@ export function JsonLd() {
     name: SITE.name,
     legalName: SITE.parentCompany,
     url: SITE.url,
-    logo: `${SITE.url}/favicon.svg`,
+    logo: `${SITE.url}/images/brand/bbs-gold-logo.webp`,
     foundingDate: String(SITE.established),
     description: SITE.description,
     email: SITE.email,
-    telephone: SITE.phone,
+    telephone: SITE.phones,
     sameAs: [SITE.instagram],
     founder: {
       "@type": "Person",
@@ -27,7 +27,7 @@ export function JsonLd() {
     name: SITE.name,
     image: `${SITE.url}/og-image.svg`,
     url: SITE.url,
-    telephone: SITE.phone,
+    telephone: SITE.phones,
     email: SITE.email,
     address: {
       "@type": "PostalAddress",

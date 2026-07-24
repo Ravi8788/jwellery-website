@@ -3,20 +3,23 @@ import type { ServiceItem, ValueItem, WhyChooseItem } from "@/lib/types";
 
 export const SITE = {
   name: "BBS GOLD",
+  shortName: "BBS",
   legalName: "BBS GOLD",
-  parentCompany: "Bagade Bandhu Saraf",
+  parentCompany: "BBS GOLD",
   managingDirector: "Abhishek Santosh Bagade",
-  founder: "Santosh Bagade",
+  founder: "Santosh Subhash Bagade",
   tagline: "Manufacturing Excellence Since 1985",
   description:
     "BBS GOLD is a trusted gold jewellery manufacturer and wholesaler since 1985. With 40+ years of excellence, we supply premium gold jewellery to retailers and dealers across India.",
-  url: "https://bbsgold.com",
-  email: "info@bbsgold.com",
+  url: "https://www.bbsgoldwholesaler.com",
+  email: "bbsgoldwholesaler@gmail.com",
   phone: "+91 97303 46525",
+  phoneSecondary: "+91 91308 14425",
+  phones: ["+91 97303 46525", "+91 91308 14425"],
   whatsapp: "919730346525",
-  whatsappMessage: "Hi Bagade Bandhu Saraf!",
-  address: "Bagade Bandhu Saraf, India",
-  addressLines: ["Bagade Bandhu Saraf", "India"],
+  whatsappMessage: "Hi BBS Gold!",
+  address: "BBS Heights, First Floor, Satara Road",
+  addressLines: ["BBS Heights", "First Floor", "Satara Road"],
   established: 1985,
   experience: "40+ Years",
   industry: "Gold Jewellery Manufacturing & Wholesale",
@@ -28,7 +31,7 @@ export const SITE = {
   },
   developer: {
     name: "Shris Innovation",
-    url: "https://shrisinnovation.com",
+    url: "https://wa.me/917588473653",
   },
 };
 
@@ -66,37 +69,43 @@ export const BUSINESS_HOURS = [
   { days: "Sunday", hours: "By Appointment" },
 ] as const;
 
-/** Homepage hero banners (BBS Jewellers creatives) — full artwork, no crop */
+/** Homepage hero banners (BBS GOLD creatives) — full artwork, no crop */
 export const HERO_BANNERS = [
   {
     id: "rings-dark",
     src: "/images/banners/banner-1.webp",
-    alt: "BBS Jewellers — pure gold rings, Bagade Bandhu Saraf since 1985",
+    alt: "BBS Gold — pure gold rings, wholesaler of exclusive gold ornaments since 1985",
     title: "Pure Gold",
   },
   {
     id: "chain-cream",
     src: "/images/banners/banner-2.webp",
-    alt: "BBS Jewellers — elegant gold chain on cream, Bagade Bandhu Saraf since 1985",
+    alt: "BBS Gold — elegant gold chain on cream, wholesaler since 1985",
     title: "Quiet Luxury",
   },
   {
-    id: "bangle-emerald",
+    id: "bangles-navy",
     src: "/images/banners/banner-3.webp",
-    alt: "BBS Jewellers — where tradition meets timeless beauty",
-    title: "Tradition & Beauty",
-  },
-  {
-    id: "chain-dark",
-    src: "/images/banners/banner-4.webp",
-    alt: "BBS Jewellers — expertly crafted gold chain, Bagade Bandhu Saraf since 1985",
-    title: "Expertly Crafted",
+    alt: "BBS Gold — legacy of trust, crafted for generations",
+    title: "Legacy of Trust",
   },
   {
     id: "diya-cream",
-    src: "/images/banners/banner-5.webp",
-    alt: "BBS Jewellers — timeless values, treasured forever",
+    src: "/images/banners/banner-4.webp",
+    alt: "BBS Gold — timeless values, treasured forever",
     title: "Timeless Values",
+  },
+  {
+    id: "earrings-olive",
+    src: "/images/banners/banner-5.webp",
+    alt: "BBS Gold — expertly crafted gold earrings since 1985",
+    title: "Expertly Crafted",
+  },
+  {
+    id: "bangle-emerald",
+    src: "/images/banners/banner-6.webp",
+    alt: "BBS Gold — where tradition meets timeless beauty",
+    title: "Tradition & Beauty",
   },
 ] as const;
 
@@ -190,18 +199,19 @@ Every piece we manufacture reflects our passion for craftsmanship and our dedica
 We sincerely thank everyone who has been a part of our journey. Your faith in BBS GOLD inspires us to continue creating timeless jewellery and building a brand that future generations can proudly trust.
 
 Trust our purity. Believe in our craftsmanship. Choose BBS GOLD.`,
-  author: "Santosh Bagade",
+  author: "Santosh Subhash Bagade",
   role: "Founder",
   image: "/images/team/santosh-bagade.webp",
 };
 
 /** Brand & team imagery */
 export const PLACEHOLDER_IMAGES = {
-  hero: "/images/banners/banner-5.webp",
+  hero: "/images/banners/banner-1.webp",
   about: "/images/products/product-14.webp",
   craftsmanship: "/images/products/product-16.webp",
   manufacturing: "/images/products/product-05.webp",
   director: "/images/team/santosh-bagade.webp",
+  logo: "/images/brand/bbs-gold-logo.webp",
 } as const;
 
 export {

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description: SITE.description,
   keywords: [
     "BBS GOLD",
-    "Bagade Bandhu Saraf",
+    "BBS Gold wholesaler",
     "gold jewellery manufacturer",
     "wholesale gold jewellery",
     "gold chains wholesale",
@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-background text-charcoal antialiased">
         <JsonLd />
         <Navbar />
-        <main className="min-h-screen pt-12 sm:pt-12 md:pt-14 lg:pt-14 xl:pt-14">{children}</main>
+        <main className="min-h-screen pt-14 sm:pt-16 lg:pt-[4.5rem]">{children}</main>
         <Footer />
         <FloatingWhatsApp />
       </body>

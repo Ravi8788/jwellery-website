@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Globe, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { FOOTER_LINKS, SITE } from "@/lib/constants";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -12,13 +13,9 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <span className="flex h-14 w-14 items-center justify-center rounded-full border border-gold/40 bg-white/5">
-                <span className="font-display text-sm font-semibold tracking-wider text-gold">
-                  BBS
-                </span>
-              </span>
-              <span className="font-display text-xl font-semibold tracking-[0.08em] text-white">
-                {SITE.parentCompany}
+              <BrandLogo size="sm" href={false} />
+              <span className="font-display text-lg font-semibold tracking-[0.08em] text-white sm:text-xl">
+                {SITE.name}
               </span>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-white/65">
@@ -53,15 +50,17 @@ export function Footer() {
               Get in Touch
             </h3>
             <ul className="space-y-4 text-sm text-white/65">
-              <li className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden />
-                <a
-                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                  className="transition-colors hover:text-gold"
-                >
-                  {SITE.phone}
-                </a>
-              </li>
+              {SITE.phones.map((phone) => (
+                <li key={phone} className="flex items-start gap-3">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden />
+                  <a
+                    href={`tel:${phone.replace(/\s/g, "")}`}
+                    className="transition-colors hover:text-gold"
+                  >
+                    {phone}
+                  </a>
+                </li>
+              ))}
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden />
                 <a
@@ -98,7 +97,6 @@ export function Footer() {
                     {line}
                   </span>
                 ))}
-                <span className="mt-1 block">{SITE.parentCompany}</span>
               </address>
             </div>
           </div>
@@ -110,7 +108,7 @@ export function Footer() {
         <div className="container-luxury flex flex-col gap-4 py-5 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
             <p>
-              © {year} {SITE.parentCompany}. All rights reserved.
+              © {year} {SITE.name}. All rights reserved.
             </p>
             <span className="hidden text-white/20 sm:inline">|</span>
             <div className="flex flex-wrap gap-x-4 gap-y-1">
@@ -143,7 +141,7 @@ export function Footer() {
               href={SITE.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow Bagade Bandhu Saraf on Instagram"
+              aria-label="Follow BBS on Instagram"
               className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white transition-all hover:border-gold hover:text-gold"
             >
               <Instagram className="h-4 w-4" />

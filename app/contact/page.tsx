@@ -48,8 +48,11 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <p className="label-caps text-muted">Address</p>
-                      <p className="mt-1 text-charcoal">{SITE.address}</p>
-                      <p className="text-sm text-muted">{SITE.parentCompany}</p>
+                      <div className="mt-1 space-y-0.5 text-charcoal">
+                        {SITE.addressLines.map((line) => (
+                          <p key={line}>{line}</p>
+                        ))}
+                      </div>
                     </div>
                   </li>
                   <li className="flex gap-4">
@@ -58,12 +61,17 @@ export default function ContactPage() {
                     </span>
                     <div>
                       <p className="label-caps text-muted">Phone</p>
-                      <a
-                        href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                        className="mt-1 block text-charcoal hover:text-gold"
-                      >
-                        {SITE.phone}
-                      </a>
+                      <div className="mt-1 space-y-1">
+                        {SITE.phones.map((phone) => (
+                          <a
+                            key={phone}
+                            href={`tel:${phone.replace(/\s/g, "")}`}
+                            className="block text-charcoal hover:text-gold"
+                          >
+                            {phone}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </li>
                   <li className="flex gap-4">

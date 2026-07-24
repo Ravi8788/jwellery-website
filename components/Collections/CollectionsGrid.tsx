@@ -16,7 +16,7 @@ export function CollectionsGrid() {
   return (
     <div>
       <div
-        className="mb-10 flex flex-wrap justify-center gap-2"
+        className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-1 xs:-mx-5 xs:px-5 sm:mx-0 sm:mb-10 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0"
         role="tablist"
         aria-label="Filter by category"
       >
@@ -30,7 +30,7 @@ export function CollectionsGrid() {
               aria-selected={active}
               onClick={() => setCategory(cat.id)}
               className={cn(
-                "border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] transition-all duration-300",
+                "shrink-0 border px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] transition-all duration-300 xs:px-4 xs:text-[11px] sm:tracking-[0.14em]",
                 active
                   ? "border-maroon bg-maroon text-white"
                   : "border-border bg-white text-charcoal hover:border-gold hover:text-maroon"

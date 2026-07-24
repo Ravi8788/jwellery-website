@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -11,9 +11,11 @@ type SoftImageProps = {
   width?: number;
   height?: number;
   className?: string;
+  style?: CSSProperties;
   sizes?: string;
   priority?: boolean;
   quality?: number;
+  loading?: "lazy" | "eager";
   fallbackSrc?: string;
 };
 
@@ -24,9 +26,11 @@ export function SoftImage({
   width,
   height,
   className,
+  style,
   sizes,
   priority,
-  quality = 70,
+  quality = 65,
+  loading,
   fallbackSrc = "/images/placeholders/jewellery.svg",
 }: SoftImageProps) {
   const [current, setCurrent] = useState(src);
@@ -39,11 +43,13 @@ export function SoftImage({
       fill={fill}
       width={fill ? undefined : width}
       height={fill ? undefined : height}
-      sizes={sizes}
+      sizes={sizes ?? (fill ? "100vw" : undefined)}
       priority={priority}
       quality={quality}
+      loading={priority ? undefined : loading ?? "lazy"}
       unoptimized={isSvg}
       className={cn(className)}
+      style={style}
       onError={() => {
         if (current !== fallbackSrc) setCurrent(fallbackSrc);
       }}

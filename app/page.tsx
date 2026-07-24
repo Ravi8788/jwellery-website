@@ -1,10 +1,10 @@
 import { Hero } from "@/components/Home/Hero";
-import { TrustBar } from "@/components/Home/TrustBar";
 import {
   AboutPreview,
   ContactCTA,
   InstagramCTA,
 } from "@/components/Home/AboutPreview";
+import { LeadersPreview } from "@/components/Home/LeadersPreview";
 import {
   CraftsmanshipPreview,
   FeaturedCollections,
@@ -16,8 +16,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustBar />
       <AboutPreview />
+      <LeadersPreview />
       <FeaturedCollections />
       <ManufacturingExcellence />
       <WhyChoose />

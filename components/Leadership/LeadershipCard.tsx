@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SoftImage } from "@/components/ui/SoftImage";
 import type { LeadershipMember } from "@/lib/data/leadership";
+import { LeaderPortrait } from "@/components/ui/LeaderPortrait";
 import { cn } from "@/lib/utils";
 
 type CardTone = "founders" | "directors";
@@ -32,7 +32,7 @@ export function LeadershipCard({
       }}
       whileHover={{ y: -8 }}
       className={cn(
-        "group relative flex h-full flex-col items-center overflow-hidden rounded-sm bg-white p-8 text-center md:p-10",
+        "group relative flex h-full flex-col items-center overflow-hidden rounded-sm bg-white p-5 text-center xs:p-6 sm:p-8 md:p-10 lg:p-10",
         "transition-shadow duration-500",
         isFounders
           ? "border border-[#D4AF37]/55 shadow-[0_8px_28px_rgba(212,175,55,0.12)] hover:border-[#D4AF37] hover:shadow-[0_18px_44px_rgba(212,175,55,0.22)]"
@@ -59,42 +59,26 @@ export function LeadershipCard({
         }}
       />
 
-      <div className="relative mb-7">
-        <div
-          className={cn(
-            "absolute -inset-1.5 rounded-full transition-colors duration-500",
-            isFounders
-              ? "border border-[#D4AF37]/45 group-hover:border-[#D4AF37]"
-              : "border border-[#E8A0B0]/70 group-hover:border-[#C45A6E]"
-          )}
-          aria-hidden
-        />
-        <div
-          className={cn(
-            "relative h-36 w-36 overflow-hidden rounded-full border-2 bg-cream md:h-40 md:w-40",
-            isFounders
-              ? "border-[#D4AF37]/70 shadow-[0_0_0_4px_rgba(212,175,55,0.12)]"
-              : "border-[#C45A6E]/55 shadow-[0_0_0_4px_rgba(196,90,110,0.1)]"
-          )}
-        >
-          <SoftImage
-            src={member.image}
-            alt={`${member.name}, ${member.designation} at BBS GOLD`}
-            fill
-            sizes="160px"
-            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
-            fallbackSrc="/images/placeholders/director.svg"
-          />
-        </div>
-      </div>
+      <LeaderPortrait
+        src={member.image}
+        alt={`${member.name}, ${member.designation} at BBS Gold`}
+        tone={tone}
+        size="md"
+        facePosition={member.facePosition}
+        className="relative mb-7"
+      />
 
       <h3 className="relative font-display text-2xl italic tracking-wide text-charcoal md:text-[1.65rem]">
         {member.name}
       </h3>
 
+      <p className="relative mt-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
+        BBS Gold
+      </p>
+
       <p
         className={cn(
-          "relative mt-2 text-[11px] font-semibold uppercase tracking-[0.22em]",
+          "relative mt-1.5 text-[11px] font-semibold uppercase tracking-[0.22em]",
           isFounders ? "text-[#D4AF37]" : "text-[#C45A6E]"
         )}
       >

@@ -14,6 +14,11 @@ export type LeadershipMember = {
   designation: LeadershipRole;
   image: string;
   bio: string;
+  /** Short points for home leader cards */
+  highlights: string[];
+  focus: string;
+  /** Optional crop focus inside the circle (e.g. "50% 45%") */
+  facePosition?: string;
   /** Set false when photo is still a placeholder */
   hasPortrait?: boolean;
 };
@@ -21,19 +26,25 @@ export type LeadershipMember = {
 export const LEADERSHIP_INTRO = {
   title: "Leadership",
   subtitle:
-    "The visionaries driving BBS GOLD forward with over four decades of excellence.",
+    "The visionaries driving BBS Gold forward with over four decades of excellence.",
   philosophy:
-    "At BBS GOLD, leadership is rooted in trust, craftsmanship, and long-term partnership. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward—driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
+    "At BBS Gold, leadership is rooted in trust, craftsmanship, and long-term partnership. Our founders built the house on hard work and integrity in 1985; today our Managing Directors carry that legacy forward—driving growth, manufacturing excellence, and thoughtful expansion without ever diluting what made the brand endure.",
 } as const;
 
 export const FOUNDERS: LeadershipMember[] = [
   {
-    id: "santosh-bagade",
-    name: "Santosh Bagade",
+    id: "santosh-subhash-bagade",
+    name: "Santosh Subhash Bagade",
     designation: "Founder",
     image: "/images/team/santosh-bagade.webp",
     hasPortrait: true,
-    bio: `Santosh Bagade laid the foundation of BBS GOLD in 1985 with a clear vision—to craft gold jewellery defined by purity, authenticity, and lasting trust. Through decades of disciplined hard work and unwavering dedication, he transformed a modest beginning into a respected manufacturing and wholesale house. His leadership continues to inspire the values of integrity and excellence that define Bagade Bandhu Saraf.`,
+    focus: "Heritage, trust & wholesale foundations",
+    highlights: [
+      "Established BBS Gold in 1985",
+      "Built a culture of purity and integrity",
+      "Guided multi-decade wholesale growth",
+    ],
+    bio: `Santosh Subhash Bagade laid the foundation of BBS Gold in 1985 with a clear vision—to craft gold jewellery defined by purity, authenticity, and lasting trust. Through decades of disciplined hard work and unwavering dedication, he transformed a modest beginning into a respected manufacturing and wholesale house.`,
   },
   {
     id: "milind-subhash-bagade",
@@ -41,7 +52,13 @@ export const FOUNDERS: LeadershipMember[] = [
     designation: "Founder",
     image: "/images/team/milind-subhash-bagade.webp",
     hasPortrait: true,
-    bio: `Milind Subhash Bagade co-founded BBS GOLD in 1985, helping establish Bagade Bandhu Saraf as a name synonymous with purity, trust, and fine craftsmanship. Through perseverance and a deep commitment to quality, he played a vital role in building the company’s foundations and nurturing lasting relationships with customers and trade partners. His vision continues to guide the values of dedication and excellence at the heart of BBS GOLD.`,
+    focus: "Craftsmanship, trust & partner relationships",
+    highlights: [
+      "Co-founded BBS Gold in 1985",
+      "Strengthened trade partnerships",
+      "Championed quality craftsmanship",
+    ],
+    bio: `Milind Subhash Bagade co-founded BBS Gold in 1985, helping establish the brand as a name synonymous with purity, trust, and fine craftsmanship. Through perseverance and a deep commitment to quality, he played a vital role in building the company’s foundations.`,
   },
 ];
 
@@ -52,7 +69,13 @@ export const MANAGING_DIRECTORS: LeadershipMember[] = [
     designation: "Managing Director",
     image: "/images/team/abhishek-santosh-bagade.webp",
     hasPortrait: true,
-    bio: `Abhishek Santosh Bagade is Managing Director of Bagade Bandhu Saraf, leading BBS GOLD’s next chapter—driving growth, design innovation, and manufacturing excellence while honouring the legacy built since 1985. He focuses on expanding retail partnerships, strengthening wholesale capabilities, and ensuring every collection upholds the brand’s standards of purity and craftsmanship.`,
+    focus: "Growth, innovation & retail partnerships",
+    highlights: [
+      "Leads BBS Gold expansion and innovation",
+      "Strengthens wholesale capabilities",
+      "Upholds purity and craftsmanship standards",
+    ],
+    bio: `Abhishek Santosh Bagade is Managing Director of BBS Gold, leading the next chapter—driving growth, design innovation, and manufacturing excellence while honouring the legacy built since 1985.`,
   },
   {
     id: "tanmay-milind-bagade",
@@ -60,7 +83,14 @@ export const MANAGING_DIRECTORS: LeadershipMember[] = [
     designation: "Managing Director",
     image: "/images/team/tanmay-milind-bagade.webp",
     hasPortrait: true,
-    bio: `Tanmay Milind Bagade serves as Managing Director of BBS GOLD, advancing the company’s growth, innovation, and manufacturing excellence while honouring the legacy established by the founders in 1985. He is committed to strengthening wholesale partnerships, elevating design and production standards, and expanding the brand’s presence—preserving the trust and craftsmanship that define Bagade Bandhu Saraf.`,
+    facePosition: "50% 42%",
+    focus: "Manufacturing excellence & market expansion",
+    highlights: [
+      "Advances BBS Gold manufacturing excellence",
+      "Elevates design and production standards",
+      "Preserves legacy while scaling growth",
+    ],
+    bio: `Tanmay Milind Bagade serves as Managing Director of BBS Gold, advancing the company’s growth, innovation, and manufacturing excellence while honouring the legacy established by the founders in 1985.`,
   },
 ];
 
@@ -69,7 +99,7 @@ export const COMPANY_TIMELINE = [
     year: "1985",
     title: "Foundation",
     description:
-      "BBS GOLD begins its journey under Bagade Bandhu Saraf—built on hard work, trust, and a commitment to pure gold craftsmanship.",
+      "BBS Gold begins its journey in 1985—built on hard work, trust, and a commitment to pure gold craftsmanship.",
   },
   {
     year: "1990s",

@@ -64,7 +64,7 @@ export function ContactCTA() {
       <div className="container-luxury overflow-hidden border border-gold/40 bg-cream px-6 py-12 text-center md:px-12 md:py-16">
         <SectionHeader
           eyebrow="Partnership"
-          title="Partner With BBS GOLD"
+          title="Partner With BBS"
           description="Looking for a reliable gold jewellery manufacturer and wholesaler? Connect with our team for collections, bulk orders, and retail partner support."
           className="mb-8"
         />
